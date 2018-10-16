@@ -51,7 +51,8 @@ public class EnemyController : MonoBehaviour
          }
 
          if (this.enemyHolder.childCount == 0)
-         {   
+         {
+             Time.timeScale = .2f;
              this.winText.enabled = true;
          }
      }

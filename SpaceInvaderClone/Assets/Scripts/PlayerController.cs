@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
@@ -40,7 +39,7 @@ public class PlayerController : MonoBehaviour {
 
     void Update()
     {
-        if (Input.GetButton("Fire1") && Time.time > this.nextFire)
+        if (Input.GetButton("Fire1") && Time.time > this.nextFire && !PauseMenu.isPaused)
         {
             this.nextFire = Time.time + this.fireRate;
             Instantiate(this.laser, this.laserSpawn.position, this.laserSpawn.rotation);

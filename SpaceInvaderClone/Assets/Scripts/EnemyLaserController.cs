@@ -33,7 +33,7 @@ public class EnemyLaserController : MonoBehaviour
             Destroy(gameObject);
             Instantiate(this.explosion, transform.position, transform.rotation);
             GameOver.isPlayerDead = true;
-            Time.timeScale = 2f;
+            Time.timeScale = .2f;
         }
         else if (other.tag == "Base")
         {

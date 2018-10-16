@@ -31,13 +31,15 @@ public class PauseMenu : MonoBehaviour
         this.pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
+        
     }
 
     public void Pause()
     {
         this.pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
-        isPaused = true;
+        PauseMenu.isPaused = true;
+       
     }
 
     public void MainMenu()

@@ -11,7 +11,7 @@ public class RestartLevel : MonoBehaviour {
 	    {
 	        PlayerScore.playerScore = 0;
 	        GameOver.isPlayerDead = false;
-	        Time.timeScale = 1;
+	        Time.timeScale = 1f;
 
             SceneManager.LoadScene("Game");
 	    }

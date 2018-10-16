@@ -5,11 +5,12 @@ using UnityEngine;
 public class EnemyLaserController : MonoBehaviour
 {
 
+    public float speed;
+    public GameObject explosion;
+
     private Transform laser;
 
-    public float speed;
-
-	void Start ()
+    void Start ()
 	{
 	    this.laser = GetComponent<Transform>();
 	}
@@ -30,7 +31,9 @@ public class EnemyLaserController : MonoBehaviour
         {
             Destroy(other.gameObject);
             Destroy(gameObject);
+            Instantiate(this.explosion, transform.position, transform.rotation);
             GameOver.isPlayerDead = true;
+            Time.timeScale = 2f;
         }
         else if (other.tag == "Base")
         {

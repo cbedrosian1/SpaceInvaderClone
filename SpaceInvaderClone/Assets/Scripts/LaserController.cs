@@ -5,10 +5,11 @@ using UnityEngine;
 public class LaserController : MonoBehaviour
 {
 
-
+    public float speed;
+    public GameObject explosion;
     private Transform laser;
 
-    public float speed;
+    
 	
 	void Start ()
 	{
@@ -32,6 +33,7 @@ public class LaserController : MonoBehaviour
             Destroy(other.gameObject);
             Destroy(gameObject);
             PlayerScore.playerScore += 10;
+            Instantiate(this.explosion, transform.position, transform.rotation);
         }
         else if (other.tag == "Base")
         {

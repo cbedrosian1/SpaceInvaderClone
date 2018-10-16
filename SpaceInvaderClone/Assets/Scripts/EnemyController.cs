@@ -36,7 +36,8 @@ public class EnemyController : MonoBehaviour
              if (Random.value > fireRate)
              {
                  Instantiate(this.shot, enemy.position, enemy.rotation);
-             }
+                 
+            }
 
              if (enemy.position.y <= -4)
              {

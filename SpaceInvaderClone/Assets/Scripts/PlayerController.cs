@@ -44,6 +44,7 @@ public class PlayerController : MonoBehaviour {
         {
             this.nextFire = Time.time + this.fireRate;
             Instantiate(this.laser, this.laserSpawn.position, this.laserSpawn.rotation);
+            GetComponent<AudioSource>().Play();
         }
     }
 }
